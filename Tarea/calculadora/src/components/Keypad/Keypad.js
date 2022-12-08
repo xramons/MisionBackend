@@ -17,7 +17,11 @@ var Keypad = function () {
         React.createElement(Button, { isNumber: true, isOperator: false, value: "." }, "."),
         React.createElement(Button, { isNumber: true, isOperator: false, value: "0" }, "0"),
         React.createElement(Button, { isNumber: false, isOperator: true, value: "/" }, "/"),
-        React.createElement(Button, { isNumber: false, isOperator: true, value: "*" }, "x"),
+        React.createElement(Button, { isNumber: false, isOperator: true, value: "*" }, "*"),
+        React.createElement(Button, { isNumber: false, isOperator: true, value: "^" }, "^"),
+        React.createElement(Button, { isNumber: false, isOperator: true, value: "√" }, "√"),
+        React.createElement(Button, { isNumber: false, isOperator: true, value: "√" }, "√"),
+        React.createElement(Button, { isNumber: false, isOperator: true, value: "RES" }, "RES"),
         React.createElement(Button, { isNumber: false, isOperator: true, value: "RESET", className: 'reset' }, "RESET"),
         React.createElement(Button, { isNumber: false, isOperator: true, value: "=", className: 'equal' }, "=")));
 };
