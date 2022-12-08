@@ -10,17 +10,3 @@
     color: variables.$third-theme-yellow-text;
   }
 }
-
-@mixin radio-button($bg-color) {
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  top: -1px;
-  left: -1px;
-  position: relative;
-  background-color: $bg-color;
-  content: "";
-  display: inline-block;
-  visibility: visible;
-  border: none;
-}

@@ -1,6 +1,5 @@
 @use "./variables";
 @use "./mixins";
-
 @mixin theme(
   $main-bg,
   $text-color,
@@ -75,14 +74,6 @@
 
               &:hover {
                 cursor: pointer;
-              }
-
-              &::after {
-                @include mixins.radio-button($screen-bg);
-              }
-
-              &:checked::after {
-                @include mixins.radio-button($toggle-color);
               }
             }
           }
