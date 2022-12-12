@@ -8,6 +8,7 @@ Decimal.prototype.square = function square() {
 var initialContextState = {
   mainText: "",
   screenText: "",
+  lastText: "",
   changeMainText: function () {},
 };
 export var CalcContext = React.createContext(initialContextState);
@@ -27,7 +28,7 @@ var CalcContextProvider = function (_a) {
     setScreenText = _e[1];
   var _f = useState(false),
     reset = _f[0],
-    setReset = _f[1];
+    setReset = _f[1];    
   var changeMainText = function (value, isNumber, isOperator) {
     if (isNumber) {
       operations.clickButton(value);
@@ -114,11 +115,16 @@ var CalcContextProvider = function (_a) {
   };
   var ifOperatorDoesntMatch = function (value) {
     let result = 0 ;
-    if(value === "SQR"){
+    try {
+      if(value === "SQR"){
         result = eval(Math.sqrt(mainText));
-    }else{
+      }else{
         result = eval(lastText + lastOperator + mainText);
+      }
+    } catch (e) {
+      console.log('ERROR', e.message);
     }
+
     
     if (result && result.toString().length > 8) {
       result = parseFloat(result);
