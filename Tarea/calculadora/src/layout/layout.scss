@@ -1,6 +1,13 @@
 @use "../assets/styles/variables";
 @use "../assets/styles/theme";
 
+body {
+  background-color: variables.$first-theme-main-bg;
+  font-family: 'Spartan', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .layout-container {
   width: 100vw;
   height: 100vh;
