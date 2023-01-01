@@ -1,0 +1,12 @@
+@use "./variables";
+
+@mixin button($bg-color, $shadow-color, $text-color, $font-size, $third: false) {
+  background-color: $bg-color;
+  border-bottom: 5px solid $shadow-color;
+  color: $text-color;
+  font-size: $font-size;
+
+  @if $third {
+    color: variables.$third-theme-yellow-text;
+  }
+}

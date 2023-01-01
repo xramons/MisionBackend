@@ -1,0 +1,25 @@
+@use "../assets/styles/variables";
+@use "../assets/styles/theme";
+
+.layout-container {
+  width: 100vw;
+  height: 100vh;
+
+  .first-theme {
+    @include theme.theme(
+      variables.$first-theme-main-bg,
+      variables.$white-text,
+      variables.$first-theme-screen-bg,
+      variables.$first-theme-red-bg,
+      variables.$first-theme-keypad-bg,
+      variables.$first-theme-dark-text,
+      variables.$first-theme-blue-bg,
+      variables.$first-theme-blue-shadow,
+      variables.$first-theme-red-bg,
+      variables.$first-theme-red-shadow,
+      variables.$first-theme-light-bg,
+      variables.$first-theme-light-shadow,
+      false
+    );
+  }
+}
